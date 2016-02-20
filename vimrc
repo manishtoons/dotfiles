@@ -42,8 +42,7 @@ set omnifunc=pythoncomplete#Complete
 set scrolloff=8 "start scorlling when we are 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
-set hidden " this hids buffers in background and wont showup in front,
-acts like any other editor
+set hidden " this hids buffers in background and wont showup in front, acts like any other editor
 set visualbell
 set autoread " reload any changes happens from the disk
 set complete+=k
@@ -54,13 +53,11 @@ set showcmd " show command on last line
 " take care of swap files
 set dictionary=$HOME/swapfiles/
 
-" set dictionary so we could use it for autocompletion and autocorrent
-as well :)
+" set dictionary so we could use it for autocompletion and autocorrent as well :)
 set dictionary+=/usr/share/dict/words
 
 " display warning on file changes
-au FileChangedShell * echo "Warning: File changed on disk, execute :e to
-reload"
+au FileChangedShell * echo "Warning: File changed on disk, execute :e to reload"
 
 let mapleader = ","
 
@@ -171,7 +168,7 @@ let g:jedi#smarttab=1
 let g:jedi#showmatch=1
 
 " set tags here
-set tags=/home/mahendra/workspace/prod/python/tags
+set tags=/home/mahendra/workspace/tags
 ",$HOME/tags,$HOME/workspace/tags,
 
 " YCM related stuff
@@ -195,7 +192,7 @@ autocmd BufReadPost *
 set viminfo^=%
 
 " colors
-colorscheme badwolf
+" colorscheme badwolf
 set background=light
 
 " Make the tab line lighter than the background.
@@ -212,16 +209,14 @@ endif
 
 " CtrlP settings
 let g:ctrlp_lazy_update = 350 " set delay to prevent extra search
-let g:ctrlp_clear_cache_on_exit = 0 " do not clear cache, we will do it
-by hitting F5
-let g:ctrlp_max_file = 0 " set no file limit, we are working on a big
-project
+let g:ctrlp_clear_cache_on_exit = 0 " do not clear cache, we will do it by hitting F5
+let g:ctrlp_max_file = 0 " set no file limit, we are working on a big project
 
 " If ag is available use it as filename list generator instead of 'find'
 if executable("ag")
-set grepprg=ag\ --nogroup\ --nocolor
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore
-''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+    set grepprg=ag\ --nogroup\ --nocolor
+    let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore
+    ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
 endif
 
 
@@ -245,8 +240,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline#extensions#quickfix#location_text = 'Location'
 let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
 let g:airline#extensions#bufferline#enabled = 0
-let g:airline#extensions#branch#displayed_head_limit = 10 " truncate
-long branch name to fix length
+let g:airline#extensions#branch#displayed_head_limit = 10 " truncate long branch name to fix length
 let g:airline#extensions#branch#format = 0
 let g:airline#extensions#syntastic#enabled = 0
 let g:airline#extensions#tagbar#enabled = 1
@@ -269,10 +263,8 @@ let g:bufferline_modified='+'
 let g:bufferline_fname_mod=':.'
 
 " vimya setting
-let g:vimyaTailCommand = 'STail' " show the maya's output log in
-seperate buffer
-let g:vimyaShowLog = 0 " donot send the output to maya, we wont open
-maya to see output
+let g:vimyaTailCommand = 'STail' " show the maya's output log in seperate buffer
+let g:vimyaShowLog = 0 " donot send the output to maya, we wont open maya to see output
 
 " Nerdtree git setting
 let g:NERDTreeIndicatorMapCustom = {
@@ -360,13 +352,14 @@ map <Leader>f <esc>:CtrlPFunky<CR>
 
 let g:highlighting = 0
 function! Highlighting()
-if g:highlighting == 1 && @/ =~ '^\\<'.expand('<cword>').'\\>$'
-let g:highlighting = 0
-return ":silent nohlsearch\<CR>"
-endif
-let @/ = '\<'.expand('<cword>').'\>'
-let g:highlighting = 1
-return ":silent set hlsearch\<CR>"
+    if g:highlighting == 1 && @/ =~ '^\\<'.expand('<cword>').'\\>$'
+        let g:highlighting = 0
+        return ":silent nohlsearch\<CR>"
+    endif
+    let @/ = '\<'.expand('<cword>').'\>'
+    let g:highlighting = 1
+    return ":silent set hlsearch\<CR>"
 endfunction
+
 nnoremap <silent> <expr> <CR> Highlighting()
 
