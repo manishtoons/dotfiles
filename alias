@@ -1,0 +1,54 @@
+#Globals
+alias rm "rm -i"
+
+# Applications
+alias snd "alsamixer"
+
+alias vi "vim"
+
+# git
+alias br "git branch --color --column"
+alias sts "git status"
+alias pull "git pull"
+alias fetch "git fetch"
+alias commit "git commit"
+alias add "git add"
+alias co "git checkout"
+
+# General
+alias x     'chmod +x'
+alias cl    clear
+
+# disk usage and availability
+alias df        'df -k \!* | m'
+alias du        'du -k'
+
+# history
+alias h          history
+alias hg        'history | grep'
+alias hm        'history | m'
+alias redo      "source ~/.redo"
+
+# environment
+alias env        printenv
+
+# deleting given pattern file withing subdirs
+alias rmbk "find \!:1 -name \!:2 -exec rm -rfv {} \;"
+
+# remove temp files
+alias rmswps "find . -type f -name '.*.swp' -exec rm -fv {} \\;"
+
+# Konsole
+setenv LS_COLORS "no=00:fi=00:di=00;33:ln=00;32:pi=40;33:so=00;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=00;32:*.tar=07:*.zip=07:*.z=07:*.Z=07:*.gz=07:*.rla=00;37:*.rll=00;37:*.rgb=00;37:*.jpg=00;37:*.gif=00;37:*.bmp=00;37:*.ppm=00;37:*.tga=00;37:*.xbm=00;37:*.xpm=00;37:*.tif=00;37:*.mov=00;37:*.mpg=00;37:*.avi=00;37:*.obn=00;31:*.obj=00;31:*.vdu=00;36:*.txt=00;32:"
+alias c "clear"
+alias cl "clear"
+alias d "pwd"
+alias sr "source"
+alias eas "vi ~/.alias"
+alias sas "source ~/.alias"
+alias m "more"
+alias l "ls -ltha --sort version --color=auto"
+alias lm "ls -ltha --sort version --color=auto | more"
+alias lt "ls -ltha --color=auto"
+alias proc "ps -axjf"
+
