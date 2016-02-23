@@ -132,15 +132,15 @@ let g:ctrlp_max_height = 30
 set wildignore+=*.pyc
 
 " settings for PYTHON-Mode
-map <Leader>g :call RopeGotoDefinition()<CR>
-let ropevim_enable_shortcuts = 1
-let g:pymode_rope_goto_def_newwin = "vnew"
-let g:pymode_rope_extended_complete = 1
-let g:pymode_breakpoint = 0
-let g:pymode_syntax = 1
-let g:pymode_rope_lookup_project = 0
-let g:pymode_rope_complete_on_dot = 0
-let g:pymode_rope = 0
+" map <Leader>g :call RopeGotoDefinition()<CR>
+" let ropevim_enable_shortcuts = 1
+" let g:pymode_rope_goto_def_newwin = "vnew"
+" let g:pymode_rope_extended_complete = 1
+" let g:pymode_breakpoint = 0
+" let g:pymode_syntax = 1
+" let g:pymode_rope_lookup_project = 0
+" let g:pymode_rope_complete_on_dot = 0
+" let g:pymode_rope = 0
 
 " better navigation through omni list
 set completeopt=longest,menuone
@@ -152,7 +152,6 @@ let g:jedi#auto_vim_configuration=1
 let g:jedi#use_tabs_not_buffers=1
 let g:jedi#use_split_not_buffers="left"
 let g:jedit#popup_on_dot=0
-" let g:jedi#show_function_definition=0
 let g:jedi#popup_select_fist=0
 let g:jedi#show_call_signature="1"
 
@@ -285,6 +284,8 @@ iab slef self
 iab sefl self
 iab sfel self
 
+" source autocorrect.vim
+source ~/autocorrect.vim
 
 " =================================
 " ========= all mappings ==========

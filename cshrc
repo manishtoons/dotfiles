@@ -3,11 +3,8 @@ if ( -f /etc/tcshrc ) then
         . /etc/tcshrc
 endif
 
-
 if ($?prompt) then
     set quiet
-    #echo "[source ~$USER/.tcshrc]"
-    #stty erase ^?
 endif
 
 setenv USERNAME $USER
@@ -80,6 +77,10 @@ endif
 # our work, so set env which tells get_git_branch.py to track branch or not,
 # this will disable tacking but it will still show branch name
 setenv DISABLE_GIT_TRACKING
+
+# set prompt; with current git branch if available.
+alias __git_current_branch 'git rev-parse --abbrev-ref HEAD >& /dev/null && echo "{`git rev-parse --abbrev-ref HEAD`}"'
+alias precmd 'set prompt="%n@%m[%c2]`__git_current_branch` "\$\ '
 
 # for bold -- alias __git_current_branch 'git rev-parse --abbrev-ref
 setxkbmap -model pc101 us,us
