@@ -101,6 +101,19 @@ autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#392929
 autocmd BufEnter * match OverLength /\%79v.*/
 augroup END
 
+" disable scrolls
+noremap <ScrollWheelUp>      <nop>
+noremap <S-ScrollWheelUp>    <nop>
+noremap <C-ScrollWheelUp>    <nop>
+noremap <ScrollWheelDown>    <nop>
+noremap <S-ScrollWheelDown>  <nop>
+noremap <C-ScrollWheelDown>  <nop>
+noremap <ScrollWheelLeft>    <nop>
+noremap <S-ScrollWheelLeft>  <nop>
+noremap <C-ScrollWheelLeft>  <nop>
+noremap <ScrollWheelRight>   <nop>
+noremap <S-ScrollWheelRight> <nop>
+noremap <C-ScrollWheelRight> <nop>
 
 " line break on 500 characters
 set lbr
@@ -146,7 +159,7 @@ set wildignore+=*.pyc
 set completeopt=longest,menuone
 
 " jedi autocompletion settings
-let g:jedo#completions_enabled=1
+let g:jedi#completions_enabled=1
 let g:jedi#auto_initialization=1
 let g:jedi#auto_vim_configuration=1
 let g:jedi#use_tabs_not_buffers=1
@@ -173,6 +186,7 @@ set tags=/home/mahendra/workspace/tags
 " YCM related stuff
 let g:ycm_server_use_vim_stdout=1
 let g:ycm_server_log_level='debug'
+let g:ycm_autoclose_preview_window_after_completion=1
 
 " ultisnip
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
