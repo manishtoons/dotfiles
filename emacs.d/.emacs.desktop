@@ -2,7 +2,7 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Sat May 14 19:56:55 2016
+;; Created Sun May 15 00:00:46 2016
 ;; Desktop file format version 206
 ;; Emacs version 24.3.1
 
@@ -11,40 +11,51 @@
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
-(setq regexp-search-ring nil)
-(setq register-alist nil)
+(setq regexp-search-ring '("elpy" "navifa" "enumerate"))
+(setq register-alist '((97) (113) (48 . "(add-to-list 'package-archives\n             '(\"elpy\" . \"https://jorgenschaefer.github.io/packages/\"))\n\n")))
 (setq file-name-history '("~/workspace/falcon/node/__init__.py" "~/workspace/falcon/" "/home/mahendra/.emacs" "/home/mahendra/test_emacs.py"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
+  nil
+  "workspace"
+  'dired-mode
+  '(linum-mode helm-mode)
+  303
+  '(362 nil)
+  t
+  '("/home/mahendra/workspace/")
+  '((overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/mahendra/workspace/dotfiles/emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(linum-mode company-mode undo-tree-mode helm-mode linum-relative-mode)
+  4823
+  '(4823 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
   "/home/mahendra/workspace/falcon/node/__init__.py"
   "__init__.py"
   'python-mode
-  '(undo-tree-mode helm-mode linum-mode elpy-mode company-mode eldoc-mode yas-minor-mode flycheck-mode auto-complete-mode)
-  2257
-  '(2191 nil)
+  '(linum-mode elpy-mode company-mode eldoc-mode highlight-indentation-mode yas-minor-mode flycheck-mode undo-tree-mode helm-mode auto-complete-mode projectile-mode)
+  1315
+  '(1315 nil)
   nil
   nil
   '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (overwrite-mode)))
 
 (desktop-create-buffer 206
-  "/usr/share/emacs/24.3/etc/TODO"
-  "TODO"
-  'outline-mode
-  '(undo-tree-mode helm-mode linum-mode view-mode goto-address-mode)
-  953
-  '(953 nil)
-  t
-  nil
-  '((buffer-file-coding-system . undecided-unix) (overwrite-mode)))
-
-(desktop-create-buffer 206
   nil
   "node"
   'dired-mode
-  '(helm-mode linum-mode)
-  254
-  '(nil nil)
+  '(linum-mode helm-mode)
+  328
+  '(328 nil)
   t
   '("/home/mahendra/workspace/falcon/node/")
   '((overwrite-mode)))
@@ -53,32 +64,32 @@
   nil
   "falcon"
   'dired-mode
-  '(helm-mode linum-mode)
+  '(linum-mode helm-mode)
   544
-  '(nil nil)
+  '(544 nil)
   t
   '("/home/mahendra/workspace/falcon/")
   '((overwrite-mode)))
 
 (desktop-create-buffer 206
-  "/home/mahendra/.emacs"
-  ".emacs"
-  'emacs-lisp-mode
-  '(undo-tree-mode helm-mode linum-mode)
-  646
-  '(646 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix) (overwrite-mode)))
-
-(desktop-create-buffer 206
   "/home/mahendra/test_emacs.py"
   "test_emacs.py"
   'python-mode
-  '(undo-tree-mode helm-mode linum-mode elpy-mode company-mode eldoc-mode highlight-indentation-mode yas-minor-mode flycheck-mode auto-complete-mode)
-  192
-  '(192 nil)
+  '(linum-mode elpy-mode company-mode eldoc-mode highlight-indentation-mode yas-minor-mode flycheck-mode undo-tree-mode helm-mode auto-complete-mode)
+  313
+  '(313 nil)
   nil
   nil
   '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/usr/share/emacs/24.3/etc/TODO"
+  "TODO"
+  'outline-mode
+  '(linum-mode undo-tree-mode helm-mode view-mode goto-address-mode)
+  953
+  '(953 nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode)))
 

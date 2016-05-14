@@ -1,0 +1,13 @@
+;;; -*- coding: utf-8 -*-
+(("/home/mahendra/.emacs.d/elpa/0blayout-20151021.349/0blayout-autoloads.el" . 775)
+ ("/home/mahendra/.emacs.d/elpa/archives/elpy/archive-contents" . 1001)
+ ("/home/mahendra/.emacs.d/elpa/archives/melpa/archive-contents" . 515553)
+ ("/home/mahendra/.emacs.d/elpa/codesearch-20160111.655/codesearch-autoloads.el" . 941)
+ ("/home/mahendra/.emacs.d/elpa/projectile-20160507.1854/projectile-autoloads.el" . 15905)
+ ("/home/mahendra/.emacs.d/elpa/projectile-codesearch-20151228.20/projectile-codesearch-autoloads.el" . 225)
+ ("/home/mahendra/.emacs.d/elpa/projectile-direnv-20160305.1738/projectile-direnv-autoloads.el" . 213)
+ ("/home/mahendra/.emacs.d/elpa/relative-line-numbers-20151006.1446/relative-line-numbers-autoloads.el" . 1819)
+ ("/home/mahendra/test_emacs.py" . 313)
+ ("/home/mahendra/workspace/dotfiles/emacs" . 4823)
+ ("/home/mahendra/workspace/falcon/node/__init__.py" . 1315)
+ ("/usr/share/emacs/24.3/etc/TODO" . 953))

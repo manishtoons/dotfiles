@@ -1,0 +1,13 @@
+;;; 0blayout-autoloads.el --- automatically extracted autoloads
+;;
+;;; Code:
+
+
+(provide '0blayout-autoloads)
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; no-update-autoloads: t
+;; coding: utf-8
+;; End:
+;;; 0blayout-autoloads.el ends here
