@@ -1,0 +1,13 @@
+;;; avy-menu-autoloads.el --- automatically extracted autoloads
+;;
+;;; Code:
+
+
+(provide 'avy-menu-autoloads)
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; no-update-autoloads: t
+;; coding: utf-8
+;; End:
+;;; avy-menu-autoloads.el ends here

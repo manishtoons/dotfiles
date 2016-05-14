@@ -1,0 +1,84 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sat May 14 19:56:55 2016
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/workspace/falcon/node/__init__.py" "~/workspace/falcon/" "/home/mahendra/.emacs" "/home/mahendra/test_emacs.py"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/mahendra/workspace/falcon/node/__init__.py"
+  "__init__.py"
+  'python-mode
+  '(undo-tree-mode helm-mode linum-mode elpy-mode company-mode eldoc-mode yas-minor-mode flycheck-mode auto-complete-mode)
+  2257
+  '(2191 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/usr/share/emacs/24.3/etc/TODO"
+  "TODO"
+  'outline-mode
+  '(undo-tree-mode helm-mode linum-mode view-mode goto-address-mode)
+  953
+  '(953 nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  nil
+  "node"
+  'dired-mode
+  '(helm-mode linum-mode)
+  254
+  '(nil nil)
+  t
+  '("/home/mahendra/workspace/falcon/node/")
+  '((overwrite-mode)))
+
+(desktop-create-buffer 206
+  nil
+  "falcon"
+  'dired-mode
+  '(helm-mode linum-mode)
+  544
+  '(nil nil)
+  t
+  '("/home/mahendra/workspace/falcon/")
+  '((overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/mahendra/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(undo-tree-mode helm-mode linum-mode)
+  646
+  '(646 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/mahendra/test_emacs.py"
+  "test_emacs.py"
+  'python-mode
+  '(undo-tree-mode helm-mode linum-mode elpy-mode company-mode eldoc-mode highlight-indentation-mode yas-minor-mode flycheck-mode auto-complete-mode)
+  192
+  '(192 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
