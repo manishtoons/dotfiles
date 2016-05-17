@@ -2,7 +2,7 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Sun May 15 00:00:46 2016
+;; Created Tue May 17 01:08:40 2016
 ;; Desktop file format version 206
 ;; Emacs version 24.3.1
 
@@ -12,17 +12,28 @@
 (setq tags-table-list nil)
 (setq search-ring nil)
 (setq regexp-search-ring '("elpy" "navifa" "enumerate"))
-(setq register-alist '((97) (113) (48 . "(add-to-list 'package-archives\n             '(\"elpy\" . \"https://jorgenschaefer.github.io/packages/\"))\n\n")))
-(setq file-name-history '("~/workspace/falcon/node/__init__.py" "~/workspace/falcon/" "/home/mahendra/.emacs" "/home/mahendra/test_emacs.py"))
+(setq register-alist '((97) (113) (48 . "        code                  - is child of sg_asset_type\n        sg_asset_type_\n")))
+(setq file-name-history '("/home/mahendra/workspace/dumps/node.py" "~/workspace/falcon/node/__init__.py" "~/workspace/falcon/" "/home/mahendra/.emacs" "/home/mahendra/test_emacs.py"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/mahendra/workspace/falcon/node/__init__.py"
+  "__init__.py"
+  'python-mode
+  '(abbrev-mode linum-mode elpy-mode eldoc-mode yas-minor-mode flycheck-mode undo-tree-mode helm-mode auto-complete-mode projectile-mode sphinx-doc-mode)
+  2286
+  '(336 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
 (desktop-create-buffer 206
   nil
   "workspace"
   'dired-mode
   '(linum-mode helm-mode)
-  303
-  '(362 nil)
+  488
+  '(488 nil)
   t
   '("/home/mahendra/workspace/")
   '((overwrite-mode)))
@@ -31,23 +42,34 @@
   "/home/mahendra/workspace/dotfiles/emacs"
   ".emacs"
   'emacs-lisp-mode
-  '(linum-mode company-mode undo-tree-mode helm-mode linum-relative-mode)
-  4823
-  '(4823 nil)
+  '(linum-mode undo-tree-mode helm-mode linum-relative-mode)
+  4728
+  '(4728 nil)
   nil
   nil
   '((buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
 
 (desktop-create-buffer 206
-  "/home/mahendra/workspace/falcon/node/__init__.py"
-  "__init__.py"
+  "/home/mahendra/workspace/dumps/test.py"
+  "test.py"
   'python-mode
-  '(linum-mode elpy-mode company-mode eldoc-mode highlight-indentation-mode yas-minor-mode flycheck-mode undo-tree-mode helm-mode auto-complete-mode projectile-mode)
-  1315
-  '(1315 nil)
+  '(linum-mode elpy-mode eldoc-mode yas-minor-mode flycheck-mode undo-tree-mode helm-mode auto-complete-mode)
+  146
+  '(146 nil)
   nil
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  nil
+  "dumps"
+  'dired-mode
+  '(linum-mode helm-mode)
+  365
+  '(365 nil)
+  t
+  '("/home/mahendra/workspace/dumps/")
+  '((overwrite-mode)))
 
 (desktop-create-buffer 206
   nil
@@ -75,7 +97,7 @@
   "/home/mahendra/test_emacs.py"
   "test_emacs.py"
   'python-mode
-  '(linum-mode elpy-mode company-mode eldoc-mode highlight-indentation-mode yas-minor-mode flycheck-mode undo-tree-mode helm-mode auto-complete-mode)
+  '(linum-mode elpy-mode eldoc-mode highlight-indentation-mode yas-minor-mode flycheck-mode undo-tree-mode helm-mode auto-complete-mode)
   313
   '(313 nil)
   nil

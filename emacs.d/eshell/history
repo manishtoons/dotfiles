@@ -1,0 +1,5 @@
+echo $SHELL
+l
+ll
+ls
+cd falcon/doc/

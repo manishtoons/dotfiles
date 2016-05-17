@@ -1,0 +1,15 @@
+#!/usr/bin/python
+"""
+Copyright (C) 2016 by Mahendra
+"""
+import os
+print os.name
+
+
+def main():
+    """Temp implementation"""
+    print os.name
+
+
+if __name__ == '__main__':
+    main()

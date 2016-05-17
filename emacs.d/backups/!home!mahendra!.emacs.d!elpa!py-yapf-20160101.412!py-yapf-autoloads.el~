@@ -1,0 +1,13 @@
+;;; py-yapf-autoloads.el --- automatically extracted autoloads
+;;
+;;; Code:
+
+
+(provide 'py-yapf-autoloads)
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; no-update-autoloads: t
+;; coding: utf-8
+;; End:
+;;; py-yapf-autoloads.el ends here
