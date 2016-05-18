@@ -51,4 +51,5 @@ alias l "ls -ltha --sort version --color=auto"
 alias lm "ls -ltha --sort version --color=auto | more"
 alias lt "ls -ltha --color=auto"
 alias proc "ps -axjf"
+alias bat 'upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep --color=NEVER -E "state|to\ full|percentage"'
 
