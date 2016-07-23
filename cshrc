@@ -50,9 +50,6 @@ setenv EDITOR "vim"
 source "$HOME/.alias"
 source "$HOME/git-completion.tcsh"
 
-# sweetness of VIM
-bindkey -v
-
 # echo "setting hotkeys"
 bindkey -k up "history-search-backward"
 bindkey -k down "history-search-forward"
@@ -61,7 +58,7 @@ bindkey "^n" "history-search-forward"
 bindkey "^a" "vi-cmd-mode-complete"
 
 # lets make stupid setof keys which acts weird with vi
-if($term == "xterm" || $term == "vt100" || $term == "vt102" || $term !~ "con*") then
+if($term == "xterm" || $term == "xterm-256color" ||  $term == "vt100" || $term == "vt102" || $term !~ "con*") then
         bindkey "\e[1~" "beginning-of-line" # home
         bindkey "\e[7~" "beginning-of-line" # home rxvt
         bindkey "\e[2~" "overwrite-mode"    # Ins
@@ -84,3 +81,10 @@ alias precmd 'set prompt="%n@%m[%c2]`__git_current_branch` "\$\ '
 
 # for bold -- alias __git_current_branch 'git rev-parse --abbrev-ref
 setxkbmap -model pc101 us,us
+bindkey -e
+
+complete argcompleter 'p@*@`/home/mahendra/bin/new_command_complete.sh`@'
+
+# syndeamon 
+# source ~/syndeamon_startup.sh
+setenv __temp_syndaemon_statup 'syndaemon -i 0.7 -K -t -d'
