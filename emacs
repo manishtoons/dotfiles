@@ -53,7 +53,7 @@
 (setq inhibit-startup-message t)
 (setq inhibit-splash-screen t)
 (setq initial-scratch-message nil)
-(setq initial-buffer-choice "~/workspace/")
+;; (setq initial-buffer-choice "~/workspace/")
 
 ;; Let's set the height and width of the window. 
 ;; The last line gets rid of the ugly bright white 
@@ -142,7 +142,7 @@
 
 ;; This needs to run after every command, 
 ;; since some modes screw with the cursor.
-(add-hook 'post-command-hook 'dennis-set-cursor)
+;;(add-hook 'post-command-hook 'dennis-set-cursor)
 
 ;; ------------------------------- 
 ;; python configurations
@@ -169,6 +169,7 @@
 
 ;; enable autopep8 formatting on save
 (require 'py-autopep8)
+(add-hook 'python-mode-hook 'elpy-enable)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 ;; disable highlight mode
@@ -223,14 +224,22 @@
 ;; ------------------------------- 
 ;; evil configurations
 ;; -------------------------------
-(require 'evil)
-(evil-mode 1)
-(setq evil-want-C-u-scroll t)
+;; ;; (require 'evil)
+;; ;; (evil-mode 1)
+;; ;; (setq evil-want-C-u-scroll t)
 
-; help - narrow fuzzy search
-; set the global key M-x to helms key
+;; ; help - narrow fuzzy search
+;; ; set the global key M-x to helms key
 (require 'helm-config)
+(global-unset-key (kbd "M-s o"))
 (global-set-key (kbd "M-x") 'helm-M-x)
 
-(desktop-save-mode 1)
+(global-set-key (kbd "M-s o") 'helm-swoop)
+
+(global-unset-key (kbd "C-x b"))
+(global-set-key (kbd "C-x b") 'helm-mini)
+
+(setq helm-split-window-default-side 'same)
+
+;; (desktop-save-mode 1)
 
