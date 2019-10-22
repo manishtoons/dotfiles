@@ -1,3 +1,4 @@
+
 ;; ------------------------------- 
 ;; basic configurations
 ;; -------------------------------
@@ -94,9 +95,12 @@
 ;; --------------------- packaging ---------------------------------
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'load-path "~/.emacs.d/elpa/evil-20160329.2251/")
-(add-to-list 'package-archives
-             '("elpy" . "https://jorgenschaefer.github.io/packages/"))
+;; (add-to-list 'package-archives
+;;              '("melpa-stable" . "https://stable.melpa.org/packages/"))
+	     
+;; (add-to-list 'load-path "~/.emacs.d/elpa/evil-20160329.2251/")
+;; (add-to-list 'package-archives
+;;             '("elpy" . "https://jorgenschaefer.github.io/packages/"))
 
 (package-initialize)
 
@@ -113,7 +117,7 @@
       myPackages)
 
 ;; ------------------------ theme and appearence ------------------
-(load-theme 'material t) ;; load material theme
+;; (load-theme 'material t) ;; load material theme
 (global-linum-mode t) ;; enable line numbers globally
 
 ;; ---------------------- navigations ----------------------------
@@ -138,7 +142,7 @@
   ;; red cursor for overwrite mode
   (when overwrite-mode
     (set-cursor-color "red")))
-(dennis-set-cursor)
+;; (dennis-set-cursor)
 
 ;; This needs to run after every command, 
 ;; since some modes screw with the cursor.
@@ -152,15 +156,15 @@
 
 ;; --- elpy ---
 (elpy-enable)
-(elpy-use-ipython)
+;; (elpy-use-ipython)
 (setq elpy-rpc-backend "jedi")
 (setq elpy-modules
       (quote
-       (elpy-module-company
-        elpy-module-eldoc
-        elpy-module-pyvenv
-        elpy-module-yasnippet
-        elpy-module-sane-defaults)))
+      (elpy-module-company
+       elpy-module-eldoc
+       elpy-module-pyvenv
+       elpy-module-yasnippet
+       elpy-module-sane-defaults)))
 
 ;; use flycheck not flymake with elpy
 (when (require 'flycheck nil t)
@@ -183,43 +187,6 @@
 ;; ------------- line numbers ------------------
 
 (require 'linum)
-(set-face-attribute 'linum nil
-                    :background (face-attribute 'default :background)
-                    :foreground (face-attribute 'font-lock-comment-face :foreground))
-(defface linum-current-line-face
-  `((t :background "gray30" :foreground "gold"))
-  "Face for the currently active Line number")
-(defvar my-linum-current-line-number 0)
-(setq my-linum-format-string " %d ")
-(defun my-linum-format (line-number)
-  (propertize (format my-linum-format-string line-number) 'face
-              (if (eq line-number my-linum-current-line-number)
-                  'linum-current-line-face
-                'linum)))
-(setq linum-format 'my-linum-format)
-(defadvice linum-update (around my-linum-update)
-  (let ((my-linum-current-line-number (line-number-at-pos)))
-    ad-do-it))
-(ad-activate 'linum-update)
-
-(require 'relative-line-numbers)
-(set-face-attribute 'relative-line-numbers-current-line nil
-                    :background "gray30" :foreground "gold")
-(setq relative-line-numbers-motion-function 'forward-visible-line)
-(setq relative-line-numbers-format
-      '(lambda (offset)
-         (concat " " (number-to-string (abs offset)) " ")))
-
-(defun num ()
-  (interactive)
-  (if (bound-and-true-p relative-line-numbers-mode)
-      (relative-line-numbers-mode 'toggle))
-  (linum-mode 'toggle))
-(defun rnum ()
-  (interactive)
-  (if (bound-and-true-p linum-mode)
-      (linum-mode 'toggle))
-  (relative-line-numbers-mode 'toggle))
 
 ;; ------------------------------- 
 ;; evil configurations
@@ -241,5 +208,50 @@
 
 (setq helm-split-window-default-side 'same)
 
-;; (desktop-save-mode 1)
+(menu-bar-mode 0)
+(tool-bar-mode 0)
 
+(global-unset-key (kbd "C-x w"))
+(global-set-key (kbd "C-x q") 'ace-select-window)
+
+;; (global-unset-key (kbd "C-x c i"))
+;; (globak-set-key (kbd "C-c i") 'helm-semantic-or-imenu)
+
+;; (desktop-save-mode 1)
+;; (define-key global-map (kbd "M-<up>") 'windmove-up)
+;; (define-key global-map (kbd "M-<down>") 'windmove-down)
+;; (define-key global-map (kbd "M-<left>") 'windmove-left)
+;; (define-key global-map (kbd "M-<right>") 'windmove-right)
+
+;; -- automatic balance buffer size
+(defun size-callback ()
+  (cond ((> (frame-pixel-width) 1280) '(90 . 0.75))
+        (t                            '(0.5 . 0.5))))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (goto-chg highlight-symbol writeroom-mode zencoding-mode zoom helm-projectile ace-window py-autopep8 helm elpy better-defaults)))
+ '(zoom-size (quote size-callback)))
+
+;; (custom-set-variables
+;;  '(zoom-size '(0.618 . 0.618)))
+
+(global-set-key (kbd "C-x +") 'zoom)
+
+;; -- highlight word under cursor
+(highlight-symbol-mode 1)
+(global-set-key (kbd "M-p") 'highlight-symbol-prev)
+(global-set-key (kbd "M-n") 'highlight-symbol-next)
+
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
